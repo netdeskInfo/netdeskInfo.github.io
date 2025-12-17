@@ -1,146 +1,185 @@
-<!DOCTYPE html>
-<html lang="fa">
+<!DOCTYPE html><html lang="fa">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NetDesk | تبلیغات و فروش آنلاین حرفه‌ای</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NetDesk | مشاوره و مدیریت فروش کسب‌وکار</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --dark:#0a0f23;
-      --card:#111827;
-      --accent:#22d3ee;
+      --bg:#020617;
+      --card:#0f172a;
+      --accent:#38bdf8;
       --text:#e5e7eb;
       --muted:#9ca3af;
+      --border:#1f2937;
     }
     *{box-sizing:border-box;margin:0;padding:0}
     body{
       font-family:"Vazirmatn","Inter",sans-serif;
-      background:var(--dark);
+      background:linear-gradient(180deg,#020617,#020617);
       color:var(--text);
       direction:rtl;
-      line-height:1.6;
+      line-height:1.9;
     }
-    a{color:var(--accent);text-decoration:none}
-    .container{max-width:1200px;margin:auto;padding:20px}
+    a{text-decoration:none;color:inherit}
+    .container{max-width:1200px;margin:auto;padding:40px 20px}/* NAV */
+nav{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:20px 0;
+}
+.logo{
+  display:flex;align-items:center;gap:10px;font-weight:700;
+}
+.logo-badge{
+  width:42px;height:42px;border-radius:12px;
+  background:linear-gradient(135deg,var(--accent),#22d3ee);
+  display:flex;align-items:center;justify-content:center;
+  color:#020617;font-weight:800;
+}
+.nav-btn{
+  padding:10px 22px;border-radius:12px;
+  background:var(--accent);color:#020617;font-weight:600;
+}
 
-    /* Header */
-    header{
-      display:flex;align-items:center;justify-content:space-between;
-      padding:60px 20px;
-      gap:40px;
-      flex-wrap:wrap;
-    }
-    .hero-text{max-width:600px;}
-    .hero-text h1{
-      font-size:48px;font-weight:700;
-      margin-bottom:16px;
-    }
-    .hero-text p{color:var(--muted);font-size:18px;}
-    .btn-primary{
-      display:inline-block;
-      margin-top:24px;
-      padding:14px 32px;
-      background:var(--accent);
-      color:#020617;
-      border-radius:8px;
-      font-weight:600;
-    }
-    .hero-img{
-      width:100%;
-      max-width:500px;
-      height:300px;
-      border-radius:20px;
-      background:#1f2937;
-      border:2px dashed #334155;
-      display:flex;align-items:center;justify-content:center;
-      color:var(--muted);
-      font-size:16px;
-    }
+/* HERO */
+.hero{
+  display:grid;grid-template-columns:1.1fr 0.9fr;
+  gap:40px;align-items:center;
+  min-height:80vh;
+}
+.hero h1{font-size:46px;margin-bottom:16px}
+.hero p{color:var(--muted);font-size:18px}
+.hero-actions{margin-top:30px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{
+  padding:14px 30px;border-radius:14px;font-weight:600;
+  border:1px solid var(--border);
+}
+.btn.primary{background:var(--accent);color:#020617;border:none}
+.btn.secondary{color:var(--text)}
+.hero-image{
+  height:420px;border-radius:26px;
+  background:#020617;border:1px dashed #334155;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--muted);text-align:center;font-size:14px;padding:20px;
+}
 
-    /* Services */
-    .services{margin-top:100px;text-align:center;}
-    .services h2{font-size:32px;margin-bottom:12px;}
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:20px;
-      margin-top:30px;
-    }
-    .card{
-      background:var(--card);
-      border-radius:12px;
-      padding:20px;
-      border:1px solid #1f2933;
-    }
-    .card h3{font-size:20px;font-weight:600;margin-bottom:10px;}
-    .card p{color:var(--muted);font-size:15px;}
+/* SECTION */
+section{margin-top:140px}
+.section-title{font-size:32px;margin-bottom:12px}
+.section-desc{color:var(--muted);max-width:760px}
 
-    /* Logos */
-    .logos{margin-top:80px;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:22px;align-items:center;}
-    .logo-box{
-      height:80px;border-radius:12px;
-      background:#1a2233;
-      display:flex;align-items:center;justify-content:center;
-      color:var(--muted);font-size:14px;
-      border:1px solid #334155;
-    }
+/* GRID / CARDS */
+.grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;margin-top:40px;
+}
+.card{
+  background:linear-gradient(180deg,#020617,var(--card));
+  border:1px solid var(--border);
+  border-radius:22px;padding:28px;
+}
+.card h3{margin-bottom:10px;font-size:18px}
+.card p{color:var(--muted);font-size:15px}
 
-    footer{text-align:center;color:var(--muted);padding:40px 0;margin-top:60px;font-size:14px;}
+/* PROCESS */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:40px}
+.step{padding:24px;border-radius:20px;border:1px solid var(--border);background:#020617}
+.step span{color:var(--accent);font-weight:700}
+
+/* LOGOS */
+.logos{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:24px;margin-top:40px}
+.logo-box{height:80px;border-radius:16px;border:1px dashed #334155;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px}
+
+/* CTA */
+.cta{
+  margin-top:160px;
+  padding:60px 40px;border-radius:30px;
+  background:linear-gradient(135deg,#020617,var(--card));
+  border:1px solid var(--border);
+  text-align:center;
+}
+.cta h2{font-size:34px;margin-bottom:16px}
+
+footer{margin-top:120px;padding:40px 0;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:14px}
+
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .hero h1{font-size:34px}
+}
+
   </style>
 </head>
-<body>
-
-<div class="container">
-
-  <!-- Header -->
-  <header>
-    <div class="hero-text">
-      <h1>نت‌دسک – فروش آنلاین حرفه‌ای</h1>
+<body><div class="container">  <!-- NAV -->  <nav>
+    <div class="logo">
+      <div class="logo-badge">ND</div>
+      NetDesk
+    </div>
+    <a class="nav-btn" href="#contact">دریافت مشاوره</a>
+  </nav>  <!-- HERO -->  <div class="hero">
+    <div>
+      <h1>مشاوره و مدیریت فروش<br>کسب‌وکارها</h1>
       <p>
-        نت‌دسک به‌عنوان همراهی حرفه‌ای شما در مسیر رشد فروش آنلاین، مدیریت و بهینه‌سازی کامل فروش اینترنتی را ارائه می‌دهد.
+        نت‌دسک با تمرکز بر تحلیل، اجرا و بهینه‌سازی فرآیندهای فروش،
+        به کسب‌وکارها کمک می‌کند فروش پایدار و قابل اندازه‌گیری داشته باشند.
+        <br><br>
+        NetDesk provides strategic sales consulting and full sales management
+        to help businesses scale efficiently.
       </p>
-      <a href="#services" class="btn-primary">خدمات ما</a>
+      <div class="hero-actions">
+        <a class="btn primary" href="#contact">شروع همکاری</a>
+        <a class="btn secondary" href="#services">مشاهده خدمات</a>
+      </div>
     </div>
-    <div class="hero-img">
-      تصویر اصلی (مثال: فروش آنلاین / داشبورد / تبلیغات)
+    <div class="hero-image">
+      جای تصویر اصلی سایت<br>
+      (داشبورد فروش / تحلیل فروش / تیم کاری)
     </div>
-  </header>
-
-  <!-- Services -->
-  <section id="services" class="services">
-    <h2>خدمات نت‌دسک</h2>
+  </div>  <!-- SERVICES -->  <section id="services">
+    <h2 class="section-title">خدمات نت‌دسک</h2>
+    <p class="section-desc">
+      ما فقط مشاوره نمی‌دهیم؛ فرآیند فروش شما را اجرا، مدیریت و بهینه می‌کنیم.
+    </p>
     <div class="grid">
-      <div class="card">
-        <h3>راه‌اندازی فروش آنلاین</h3>
-        <p>راه‌اندازی فروشگاه آنلاین در سایت شخصی و پلتفرم‌های بزرگ فروش.</p>
-      </div>
-      <div class="card">
-        <h3>مدیریت مارکت‌پلیس‌ها</h3>
-        <p>دیجی‌کالا، ترب، باسلام و سایر پلتفرم‌های فروش اینترنتی.</p>
-      </div>
-      <div class="card">
-        <h3>مشاوره و پشتیبانی</h3>
-        <p>مشاوره تخصصی فروش آنلاین و پشتیبانی پنل فروش.</p>
-      </div>
+      <div class="card"><h3>مشاوره فروش</h3><p>تحلیل وضعیت فعلی فروش، قیمت‌گذاری و استراتژی رشد.</p></div>
+      <div class="card"><h3>مدیریت فروش آنلاین</h3><p>مدیریت کامل فروش در دیجی‌کالا و مارکت‌پلیس‌ها.</p></div>
+      <div class="card"><h3>بهینه‌سازی عملیات</h3><p>کاهش خطاهای اجرایی، بهبود انبار و ارسال.</p></div>
+      <div class="card"><h3>تحلیل بازار و رقبا</h3><p>تصمیم‌گیری مبتنی بر داده و گزارش‌های واقعی.</p></div>
     </div>
-  </section>
-
-  <!-- Partners -->
-  <section class="services">
-    <h2>همکاری با برندها</h2>
+  </section>  <!-- DIGIKALA -->  <section>
+    <h2 class="section-title">مدیریت تخصصی فروش در دیجی‌کالا</h2>
+    <p class="section-desc">
+      NetDesk manages all Digikala sales processes so you can focus on business growth.
+    </p>
+    <div class="grid">
+      <div class="card"><p>قیمت‌گذاری هوشمند</p></div>
+      <div class="card"><p>انبار یکپارچه و آماده‌سازی محموله</p></div>
+      <div class="card"><p>ارسال محموله (محدوده مازندران)</p></div>
+      <div class="card"><p>خرید کالا و رصد رقبا</p></div>
+    </div>
+  </section>  <!-- PROCESS -->  <section>
+    <h2 class="section-title">فرآیند همکاری</h2>
+    <div class="steps">
+      <div class="step"><span>01</span><p>تماس و نیازسنجی</p></div>
+      <div class="step"><span>02</span><p>تحلیل فروش</p></div>
+      <div class="step"><span>03</span><p>ارائه راهکار</p></div>
+      <div class="step"><span>04</span><p>اجرا و بهینه‌سازی</p></div>
+    </div>
+  </section>  <!-- PARTNERS -->  <section>
+    <h2 class="section-title">همکاری با برندها</h2>
     <div class="logos">
-      <div class="logo-box">لوگو جمع</div>
-      <div class="logo-box">لوگو مهان تجارت</div>
-      <div class="logo-box">لوگو هیمن</div>
+      <div class="logo-box">لوگو شرکت جمع</div>
+      <div class="logo-box">لوگو مهان تجارت طبرستان</div>
+      <div class="logo-box">لوگو شرکت ساختمانی هیمن</div>
     </div>
-  </section>
-
-  <footer>
-    © 2025 NetDesk — All rights reserved.
-  </footer>
-
-</div>
-
-</body>
+  </section>  <!-- CTA -->  <div id="contact" class="cta">
+    <h2>آماده رشد فروش هستید؟</h2>
+    <p class="section-desc" style="margin:auto">
+      برای دریافت مشاوره تخصصی فروش و مدیریت کسب‌وکار، همین حالا با ما تماس بگیرید.
+    </p>
+    <div class="hero-actions" style="justify-content:center">
+      <a class="btn primary" href="#">تماس با ما</a>
+    </div>
+  </div>  <footer>
+    © 2025 NetDesk — Sales Consulting & Management
+  </footer></div></body>
 </html>
