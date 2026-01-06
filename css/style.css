@@ -1648,6 +1648,14 @@ section.banner-blog .banner-caption h1 {
     position: relative;
     z-index: 2;
 }
+#home.banner {
+    height: 100vh;
+    min-height: 650px;
+}
+#home-svg {
+    pointer-events: none;
+}
+
 
 
 
