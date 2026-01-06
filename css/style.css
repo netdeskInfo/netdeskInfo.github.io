@@ -665,79 +665,39 @@ nav.fixed-top .nav-item .nav-link:before {
 /*============ 4. Banner Section============*/
 
 .banner {
-    width: 100%;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
     position: relative;
+    width: 100%;
+    height: 100vh; /* تمام ارتفاع صفحه */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
+    background-color: #000; /* رنگ fallback برای مواقعی که ویدیو لود نمی‌شود */
 }
 
-.banner:after {
-    content: " ";
+.banner video {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #000;
-    z-index: 2;
-    opacity: .5;
-}
-
-.banner .banner-caption {
     top: 50%;
-    position: absolute;
-    color: #fff;
-    z-index: 11;
-    width: 100%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    filter: brightness(0.7); /* اختیاری برای تیره کردن ویدیو تا متن خواناتر شود */
 }
 
-.banner .banner-caption h1 {
-    font-size: 88px;
-    font-weight: 900;
-    color: #fff;
-}
-
-.banner .banner-caption p {
-    font-size: 24px;
-    font-family: "Vazir";
-    color: #eee;
-}
-
-.cd-headline {
-    font-size: 3rem;
-    line-height: 1.2;
-}
-
-.cd-words-wrapper {
-    display: inline-block;
+.banner-caption {
     position: relative;
-    text-align: left;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    max-width: 90%;
+    transform: translateY(-10%);
 }
 
-.cd-words-wrapper b {
-    display: inline-block;
-    position: absolute;
-    white-space: nowrap;
-    left: 0;
-    top: 0;
-}
-
-.cd-words-wrapper b.is-visible {
-    position: relative;
-}
-
-.no-js .cd-words-wrapper b {
-    opacity: 0;
-}
-
-.no-js .cd-words-wrapper b.is-visible {
-    opacity: 1;
-}
 
 
 /* xclip */
