@@ -1659,6 +1659,19 @@ section.banner-blog .banner-caption h1 {
 #home .banner:after {
     display: none;
 }
+#home {
+    height: 100vh;
+}
 
+#home .banner {
+    height: 100%;
+    position: relative;
+}
 
-
+#home-svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+}
