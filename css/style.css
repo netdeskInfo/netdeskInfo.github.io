@@ -1615,3 +1615,39 @@ section.banner-blog .banner-caption h1 {
  .owl-carousel{
     direction: ltr !important;
    }
+
+
+/*=========16. backV ============*/
+
+#home {
+    position: relative;
+    overflow: hidden;
+}
+
+#home .bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 0;
+}
+
+#home .video-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 1;
+}
+
+#home .banner-caption,
+#home .arrow,
+#home svg {
+    position: relative;
+    z-index: 2;
+}
+
+
+
