@@ -1626,10 +1626,6 @@ section.banner-blog .banner-caption h1 {
     background: #000;
 }
 
-}
-.video-hero .bg-video {
-    filter: brightness(0.8) contrast(1.05);
-}
 
 .video-hero .bg-video {
     position: absolute;
