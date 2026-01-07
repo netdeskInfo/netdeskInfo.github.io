@@ -1653,3 +1653,9 @@ section.banner-blog .banner-caption h1 {
     position: relative;
     z-index: 2;
 }
+
+
+.bg-video {
+    will-change: transform;
+    backface-visibility: hidden;
+}
