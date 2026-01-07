@@ -1655,7 +1655,3 @@ section.banner-blog .banner-caption h1 {
 }
 
 
-.bg-video {
-    will-change: transform;
-    backface-visibility: hidden;
-}
