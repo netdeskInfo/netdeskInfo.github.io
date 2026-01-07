@@ -1637,12 +1637,13 @@ section.banner-blog .banner-caption h1 {
     z-index: 0;
 }
 
-.video-hero .video-overlay {
-    position: absolute;
-    inset: 0;
-    background: hsla(0, 0%, 0%, 0.5);
-    z-index: 1;
+.video-hero .bg-video {
+    filter: brightness(0.7);
 }
+.video-hero .video-overlay {
+    display: none;
+}
+
 
 .video-hero .banner-caption,
 .video-hero .arrow,
