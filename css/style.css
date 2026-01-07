@@ -1638,11 +1638,14 @@ section.banner-blog .banner-caption h1 {
 }
 
 .video-hero .video-overlay {
-    position: absolute;
-    inset: 0;
-    background: hsla(0, 0%, 100%, 0.144);
-    z-index: 1;
+    background: linear-gradient(
+        180deg,
+        rgba(0,0,0,0.6) 0%,
+        rgba(0,0,0,0.25) 50%,
+        rgba(0,0,0,0.6) 100%
+    );
 }
+
 
 .video-hero .banner-caption,
 .video-hero .arrow,
